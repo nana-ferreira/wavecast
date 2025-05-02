@@ -1,0 +1,30 @@
+.secao {
+    display: grid;
+    align-items: end;
+    row-gap: 2rem;
+}
+
+.secao-horizontal, .secao-vertical {
+    grid-template-rows: 70px auto;
+}
+
+.secao-horizontal>.secao__cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(370px, 80%/3)), 1fr));
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+}
+
+.secao-vertical {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.secao-vertical .secao__cartoes {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1.25rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-column: 1/3;
+}
